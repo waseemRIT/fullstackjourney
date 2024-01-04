@@ -113,6 +113,10 @@ footer a:hover{
 }
 
 @media screen and (max-width: 650px){
+    .home{
+        background: url("../images/bg-hacker-video.mp4") no-repeat;
+    }
+    
     .home .content-wrapper{
         padding: 10px;
     }
