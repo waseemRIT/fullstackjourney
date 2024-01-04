@@ -96,35 +96,65 @@ footer a:hover{
 
 /*      HOME
 ----------------------------------------------------------------*/
-.home{
-    background: url("../images/bg-prof-seemo-logo.png") no-repeat;
+/*      HOME
+----------------------------------------------------------------*/
+.home {
+    position: relative;
+    overflow: auto; /* Allow scrolling if content overflows */
+    min-height: 100vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
 }
-.home .content-wrapper{
 
-    flex: 1 0 auto;
+.home video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensures video stays behind content */
+    opacity: 0.9; /* Adjust as needed */
 }
 
-.content-bg{
-    background: rgb(255 255 255 / 0.9);
+.home .content-wrapper {
+    flex: 1 0 auto; /* Adjust as needed for better flexibility */
+    position: relative;
+    z-index: 1; /* Ensures content is above video */
+    margin: 0 auto;
+    max-width: 900px;
     padding: 30px;
 }
 
-@media screen and (max-width: 650px){
-    .home{
-        background: url("../images/bg-hacker-video.mp4") no-repeat;
-    }
-    
-    .home .content-wrapper{
-        padding: 10px;
-    }
-    .content-bg{
-        padding: 20px;
+.content-bg {
+    background: rgb(255 255 255 / 1);
+    padding: 30px;
+}
+
+@media screen and (max-width: 650px) {
+    .home video {
+        background: no-repeat;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
     }
 
+    .home {
+        position: relative;
+        overflow: auto; /* Allow scrolling on smaller screens */
+    }
+
+    .home .content-wrapper {
+        padding: 10px;
+    }
+
+    .content-bg {
+        padding: 20px;
+    }
 }
+
 
 /*      RESUME
 ----------------------------------------------------------------*/
@@ -289,3 +319,5 @@ footer{
         padding: 10px;
     }
 }
+
+
