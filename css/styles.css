@@ -43,6 +43,13 @@ h1{
     font-size: 7rem;
     line-height: 0.85;
 }
+@media screen and (max-width: 590px) {
+    h1{
+        font-size: 5rem;
+        line-height: 0.85;
+    }
+}
+
 
 h2{
     font-size: 3.6rem;
@@ -68,7 +75,7 @@ a{
 }
 
 a:hover {
-    color: #5e00ff;
+    color: #04395E;
     text-decoration: none;
 }
 
@@ -81,8 +88,22 @@ footer a:hover{
 }
 
 .btn{
-    background: #3c8453;
-    color: #f6f6f6;
+    background: #78C3FB;
+    color: #010B13;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-resume-page{
+    background: #78C3FB;
+    color: #010B14;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
